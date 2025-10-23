@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Family Budget App</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Family Budget</h1>
+    <div class="app">
+      <!-- LEFT: Form -->
+      <aside class="left">
+        <form id="expenseForm">
+          <label for="monthSelect">Month</label>
+          <select id="monthSelect" name="month" required>
+            <option value="">-- Select month --</option>
+            <option>January</option>
+            <option>February</option>
+            <option>March</option>
+            <option>April</option>
+            <option>May</option>
+            <option>June</option>
+            <option>July</option>
+            <option>August</option>
+            <option>September</option>
+            <option>October</option>
+            <option>November</option>
+            <option>December</option>
+          </select>
+
+
+          <label for="typeSelect">Expense Type</label>
+          <select id="typeSelect" name="type" required>
+            <option value="">-- Select expense --</option>
+            <option>telephone</option>
+            <option>electricity</option>
+            <option>fuel</option>
+            <option>food</option>
+            <option>clothes</option>
+          </select>
+
+
+          <label for="amountInput">Amount</label>
+          <input id="amountInput" name="amount" type="number" min="0" step="0.01" placeholder="0.00" required />
+
+
+          <button id="saveBtn" type="submit">Save Expense</button>
+        </form>
+
+
+        <hr />
+
+
+        <label for="viewMonth">View month</label>
+        <select id="viewMonth">
+          <option value="">-- Select month to view --</option>
+          <option>January</option>
+          <option>February</option>
+          <option>March</option>
+          <option>April</option>
+          <option>May</option>
+          <option>June</option>
+          <option>July</option>
+          <option>August</option>
+          <option>September</option>
+          <option>October</option>
+          <option>November</option>
+          <option>December</option>
+        </select>
+      </aside>
+
+
+      <main class="right">
+        <h2>Expenses for: <span id="currentMonth">—</span></h2>
+        <ul id="expensesList" class="expenses-list">
+        </ul>
+        <div id="totalContainer">Total: <span id="totalAmount">0.00</span></div>
+      </main>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
